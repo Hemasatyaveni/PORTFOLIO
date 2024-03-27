@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<head>
+    <title>Portfolio</title>
+    <style>
+        body {
+            background-image: url("https://static.vecteezy.com/system/resources/thumbnails/007/718/309/small/minimalist-dark-gradient-wave-background-simple-design-for-your-website-free-vector.jpg");
+            background-color:black;
+            background-repeat: no-repeat;
+            background-size:1550px 900px;
+            color: white;
+        }
+        .nav ul{
+            list-style-type: none;
+            margin: 0 20px;
+            padding: 30px 20px;
+            text-align: right;
+        }
+        .nav ul li{
+            display: inline-block;
+        }
+        .nav ul li a{
+            padding: 4px;
+            margin: 10px 20px;
+            color: white;
+            font-size: 25px;
+            text-decoration: none;
+            position: relative;
+        }
+        .nav ul li a::after{
+            content: '';
+            width:0;
+            height: 3px;
+            background: #cd0141;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
+        .nav ul li a:hover::after{
+            width: 100%;
+        }
+        .header-text{
+            margin-top: -30px;
+        }
+        .header-text h1{
+            margin-top: 15%;
+            font-size: 70px;
+            color: white;
+            margin-left: 10%;
+        }
+        .header-text h1 span{
+            color: #cd0141;
+        }
+        .header-text p{
+            font-size: 40px;
+            color:white;
+            margin-top: -2%;
+            margin-left: 10%;
+        }
+        #about{
+            padding-top: 35%;
+            color: black;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .about-col-1{
+            flex-basis: 35%;
+        }
+        .about-col-1 img{
+            width: 100%;
+            border-radius: 15px;
+            margin-left: 5%;
+        }
+        .about-col-2{
+            flex-basis: 60%;
+        }
+        .tab-titles{
+            display: flex;
+            margin: 20px 0 40px;
+        }
+        .tab-links{
+            font-size:25px;
+            color: white;
+            margin-right: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+        }
+        .tab-links::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background-color: #e2205d;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
+        .tab-links.active-link::after{
+            width: 50%;
+        }
+        .tab-contents ul li{
+            color: white;
+            font-size: 20px;
+            margin: 10px 0;
+            list-style-type:none;
+        }
+        .tab-contents ul li span{
+            color: #e2205d;
+        }
+        .tab-contents {
+            display: none;
+        }
+        .tab-contents.active-tab{
+            display: block;
+        }
+        .contact-left{
+            flex-basis: 35%;
+            margin-left: 5%;
+        }
+        .contact-right{
+            flex-basis: 60%;
+        }
+        .contact-left p{
+            margin-top: 30px;
+        }
+        .contact-left p i{
+            color:#ff004f;
+            margin-right: 15px;
+            font-size: 25px;
+        }
+        .social-icons{
+            margin-top: 30px;
+        }
+        .social-icons a{
+            text-decoration: none;
+            font-size: 30px;
+            margin-right: 15px;
+            color:#ababab;
+            display: inline-block;
+            transition: transform 0.5s;
+        }
+        .social-icons a:hover{
+            color: #ff004f;
+            transform: translateY(-5px);
+        }
+        .btn{
+            display: block;
+            margin: 50px auto;
+            width:fit-content;
+            border:1px solid black;
+            padding: 14px 50px;
+            text-decoration: none;
+            color: black;
+            border-radius: 5px;
+            transition: background 0.5s;
+        }
+        .btn:hover{
+            background:rgb(120, 189, 16);
+        }
+        .btn.btn2{
+            display: inline-block;
+            background: rgb(120, 189, 16);
+        }
+        form  input, form textarea{
+            width:90%;
+            border:0;
+            outline: none;
+            background: #262626;
+            padding: 15px;
+            margin: 15px 0;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        form .btn2{
+            padding: 14px 60px;
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .portfolio-left img{
+            width: 550px;
+            height: 375px;
+            border-radius: 15px;
+            margin-left: 5%;
+        }
+        .portfolio-left{
+            flex-basis: 35%;
+            margin-top: 30px;
+        }
+        .portfolio-right{
+            flex-basis: 60%;
+            padding: 1% 0;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+    </ul>
+</div>
+    <div class="header-text">
+        <h1>Hey there,I'm <span>Satya</span></h1>
+        <p><b>A web developer</b></p>
+    </div>
+    <section id="about">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="satya1.jpg" alt="image">
+                </div>
+                <div class="about-col-2">
+                    <h1 style="font-size: 60px;font-weight: 600;color:white;">About Me</h1>
+                    <p style="color: white;font-size: 20px;">Hello, I'm Satya, currently i'm pursuing  B.Tech second year at KIET College. My field of study is Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning.Here i'm web developer.And my goal is to get a good job in reputed company.</p>
+                    <p style="color: white;font-size: 20px;">Contact no : 9100598432</p>
+                    <p style="color: white;font-size: 20px;">Email ID : <a href="mailto:midathanasatya8@gmail.com" style="color: palevioletred;text-decoration: none;">midathanasatya8@gmail.com</a></p>
+                    <div class="tab-titles">
+                        <p  class="tab-links active-link" onclick="opentab('skills')"><b>Skills</b></p>
+                        <p  class="tab-links" onclick="opentab('education')"><b>Education</b></p>
+                    </div>
+                        <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Technical Skills</span><br>C-Language<br>Python<br>HTML<br>CSS<br>JavaScript</li>
+                            <li><span>Professional Skills</span><br>Communication<br>Team work</li><br>
+                        </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-2026</span><br>Now studying B-TECH in KIET College</li><br>
+                            <li><span>2020-2022</span><br>Inter from Narayana High school</li><br>
+                            <li><span>2020</span><br>10th from High School</li>
+                        </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <h1 style="font-size: 45px;text-align: center;">My Project</h1>
+    <div id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="portfolio-left">
+                    <img src="c:\Users\rutik\Pictures\Screenshots\Screenshot (18).png" alt="project">
+                </div>
+                <div class="portfolio-right">
+                    <p>This is our team project</p>
+                    <p> Here our project name is Language Translator where we created a website to translate the sentence to one language to another language it is help ful to the people to learn the new language with our website </p>
+                    <button type="button" class="btn btn2"><a href="http://127.0.0.1:5000" style="text-decoration: none;color: white;">Try live it</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="contact">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title" style="font-size: 50px;">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>midathanasatya8@gmail.com</p>
+                    <p><i class="fas fa-phone"></i>9100598432</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/s.a.t.y.a_08?igshid=YTQwZjQ0NmI0OA=="><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/midathana-satya-31060a281"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Hemasatyaveni"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text"  name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
